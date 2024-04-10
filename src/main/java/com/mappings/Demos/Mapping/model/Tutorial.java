@@ -3,13 +3,14 @@ package com.mappings.Demos.Mapping.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 @Table(name = "tutorials")
 public class Tutorial {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tutorial_generator")
     private long id;
 
     @Column(name = "title")
@@ -61,4 +62,6 @@ public class Tutorial {
     public void setPublished(boolean published) {
         this.published = published;
     }
+
+
 }
