@@ -2,11 +2,13 @@ package com.mappings.Demos.Mapping.model;
 
 // One to Many Relationship!
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "comments_two")
 public class CommentTwo {
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

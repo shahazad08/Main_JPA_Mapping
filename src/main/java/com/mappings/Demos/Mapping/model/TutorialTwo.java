@@ -32,6 +32,14 @@ public class TutorialTwo {
 
     }
 
+    public Set<CommentTwo> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<CommentTwo> comments) {
+        this.comments = comments;
+    }
+
     public TutorialTwo(String title, String description, boolean published) {
         this.title = title;
         this.description = description;
@@ -68,6 +76,10 @@ public class TutorialTwo {
 
     public void setPublished(boolean published) {
         this.published = published;
+    }
+
+    public void removeComments() {
+        this.comments.clear();
     }
     // getters and setters
 }
