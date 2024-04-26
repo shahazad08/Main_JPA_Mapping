@@ -27,8 +27,8 @@ public class TutorialTwoController {
 
         if (title == null)
             tutorialTwoRepository.findAll().forEach(tutorials::add);
-        else
-            tutorialTwoRepository.findByTitleContaining(title).forEach(tutorials::add);
+//        else
+//            tutorialTwoRepository.findByTitleContaining(title).forEach(tutorials::add);
 
         if (tutorials.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
